@@ -28,7 +28,7 @@ $mode_b["a"][1] = 10;
 $mode_b["m"][1] = 11;
 $mode_b["h"][1] = 12;
 
-$mode_b["f"][2] = "FruityWifi.lst";
+$mode_b["f"][2] = "BlackBulb.lst";
 $mode_b["v"][2] = "0";
 $mode_b["n"][2] = "SSID-HERE";
 $mode_b["c"][2] = "1";

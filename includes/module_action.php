@@ -40,15 +40,15 @@ $install = $_GET['install'];
 if($service != "") {
     
     //$exec = "/bin/sed -i 's/ss_mode.*/ss_mode = \\\"".$service."\\\";/g' options_config.php";
-    //exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"", $output);
+    //exec("/usr/share/BlackBulb/bin/danger \"" . $exec . "\"", $output);
 
     /*
     // START MONITOR MODE (mon0)
     $iface_mon0 = exec("/sbin/ifconfig |grep mon0");
     if ($iface_mon0 == "") {
         $exec = "/usr/bin/sudo /usr/sbin/airmon-ng start $io_action_extra";
-        //exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"", $output); //DEPRECATED
-        //exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"");
+        //exec("/usr/share/BlackBulb/bin/danger \"" . $exec . "\"", $output); //DEPRECATED
+        //exec("/usr/share/BlackBulb/bin/danger \"" . $exec . "\"");
     }
     */    
     
@@ -60,12 +60,12 @@ if($service != "") {
         // COPY LOG
         $exec = "$bin_cp $mod_logs logs/".gmdate("Ymd-H-i-s").".log";
         //exec("$bin_danger \"$exec\"", $dump); //DEPRECATED
-	exec_fruitywifi($exec);
+	exec_blackbulb($exec);
 	
         // CLEAN LOGS
         $exec = "$bin_echo '' > $mod_logs";
         //exec("$bin_danger \"$exec\"" ); //DEPRECATED
-	exec_fruitywifi($exec);
+	exec_blackbulb($exec);
 	
         // START MODULE
         
@@ -114,13 +114,13 @@ if($service != "") {
         
         $exec = "$bin_mdk3 mon0 $mode $options >> $mod_logs &";
         //exec("$bin_danger \"$exec\"" ); //DEPRECATED
-	exec_fruitywifi($exec);
+	exec_blackbulb($exec);
 	
     } else if($action == "stop") {
         // STOP MODULE
         $exec = "$bin_killall mdk3";
         //exec("$bin_danger \"$exec\"" ); //DEPRECATED
-	exec_fruitywifi($exec);
+	exec_blackbulb($exec);
     }
 
 }
@@ -129,11 +129,11 @@ if ($install == "install_mdk3") {
 
     $exec = "$bin_chmod 755 install.sh";
     //exec("$bin_danger \"$exec\"" ); //DEPRECATED
-    exec_fruitywifi($exec);
+    exec_blackbulb($exec);
 
     $exec = "$bin_sudo ./install.sh > $log_path/install.txt &";
     //exec("$bin_danger \"$exec\"" ); //DEPRECATED
-    exec_fruitywifi($exec);
+    exec_blackbulb($exec);
 
     header('Location: ../../install.php?module=mdk3');
     exit;

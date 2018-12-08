@@ -20,7 +20,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>FruityWifi</title>
+<title>BlackBulb</title>
 <script src="../js/jquery.js"></script>
 <script src="../js/jquery-ui.js"></script>
 <link rel="stylesheet" href="../css/jquery-ui.css" />
@@ -65,16 +65,16 @@ $service = $_POST["service"];
 // DELETE LOG
 if ($logfile != "" and $action == "delete") {
     $exec = "rm ".$mod_logs_history.$logfile.".log";
-    //exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"", $dump); //DEPRECATED
-    exec_fruitywifi($exec);
+    //exec("/usr/share/BlackBulb/bin/danger \"" . $exec . "\"", $dump); //DEPRECATED
+    exec_blackbulb($exec);
 }
 
 // SET MODE
 if ($_POST["change_mode"] == "1") {
     $ss_mode = $service;
     $exec = "/bin/sed -i 's/ss_mode.*/ss_mode = \\\"".$ss_mode."\\\";/g' includes/options_config.php";
-    //exec("/usr/share/FruityWifi/bin/danger \"" . $exec . "\"", $output); //DEPRECATED
-    exec_fruitywifi($exec);
+    //exec("/usr/share/BlackBulb/bin/danger \"" . $exec . "\"", $output); //DEPRECATED
+    exec_blackbulb($exec);
 }
 
 include "includes/options_config.php";

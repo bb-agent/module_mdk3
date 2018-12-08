@@ -55,7 +55,7 @@ if ($type == "mode_b") {
         //echo $tmp[$i]."<br>";
         
         $exec = "/bin/sed -i 's/mode_b\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\].*/mode_b\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\] = 0;/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
         //echo $exec."<br>";
         
     }
@@ -65,7 +65,7 @@ if ($type == "mode_b") {
         //echo $tmp[$i]."<br>";
         
         $exec = "/bin/sed -i 's/mode_b\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\].*/mode_b\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\] = 1;/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
         //echo $exec."<br>";
         
     }
@@ -73,31 +73,31 @@ if ($type == "mode_b") {
     $opt_f = $_POST["opt_f"];
     if ($opt_f != "") {
         $exec = "/bin/sed -i 's/mode_b\\[\\\"f\\\"\\]\\[2\\].*/mode_b\\[\\\"f\\\"\\]\\[2\\] = \\\"".$opt_f."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt_v = $_POST["opt_v"];
     if ($opt_v != "") {
         $exec = "/bin/sed -i 's/mode_b\\[\\\"v\\\"\\]\\[2\\].*/mode_b\\[\\\"v\\\"\\]\\[2\\] = \\\"".$opt_v."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt_n = $_POST["opt_n"];
     if ($opt_n != "") {
         $exec = "/bin/sed -i 's/mode_b\\[\\\"n\\\"\\]\\[2\\].*/mode_b\\[\\\"n\\\"\\]\\[2\\] = \\\"".$opt_n."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt_c = $_POST["opt_c"];
     if ($opt_c != "") {
         $exec = "/bin/sed -i 's/mode_b\\[\\\"c\\\"\\]\\[2\\].*/mode_b\\[\\\"c\\\"\\]\\[2\\] = \\\"".$opt_c."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt_s = $_POST["opt_s"];
     if ($opt_s != "") {
         $exec = "/bin/sed -i 's/mode_b\\[\\\"s\\\"\\]\\[2\\].*/mode_b\\[\\\"s\\\"\\]\\[2\\] = \\\"".$opt_s."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     header('Location: ../index.php?tab=1');
@@ -115,7 +115,7 @@ if ($type == "mode_a") {
     $tmp = array_keys($mode_a);
     for ($i=0; $i< count($tmp); $i++) {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\].*/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\] = 0;/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
         //echo $exec."<br>";
     }
 
@@ -123,7 +123,7 @@ if ($type == "mode_a") {
     $tmp = $_POST["options"];
     for ($i=0; $i< count($tmp); $i++) {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\].*/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\] = 1;/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
         //echo $exec."<br>";
     }
 
@@ -132,28 +132,28 @@ if ($type == "mode_a") {
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "i";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "c";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "s";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     header('Location: ../index.php?tab=2');
@@ -171,7 +171,7 @@ if ($type == "mode_d") {
     $tmp = array_keys($mode_d);
     for ($i=0; $i< count($tmp); $i++) {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\].*/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\] = 0;/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
         //echo $exec."<br>";
     }
 
@@ -179,7 +179,7 @@ if ($type == "mode_d") {
     $tmp = $_POST["options"];
     for ($i=0; $i< count($tmp); $i++) {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\].*/mode_".$mode."\\[\\\"".$tmp[$i]."\\\"\\]\\[0\\] = 1;/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
         //echo $exec."<br>";
     }
 
@@ -188,35 +188,35 @@ if ($type == "mode_d") {
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "b";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "d";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "c";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     $opt = "s";
     $opt_value = $_POST["opt_".$opt];
     if ($opt != "") {
         $exec = "/bin/sed -i 's/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\].*/mode_".$mode."\\[\\\"".$opt."\\\"\\]\\[2\\] = \\\"".$opt_value."\\\";/g' options_config.php";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
     header('Location: ../index.php?tab=3');
@@ -235,7 +235,7 @@ if ($type == "templates") {
 				$newdata = preg_replace("/[\n\r]/",  "", $newdata);
 				$template_path = "$mod_path/includes/templates";
         		$exec = "/bin/echo '$newdata' | base64 --decode > $template_path/$tempname";
-                exec_fruitywifi($exec);
+                exec_blackbulb($exec);
     		}
     	}
     	
@@ -246,7 +246,7 @@ if ($type == "templates") {
 			if ($new_rename_file != "") {
 				$template_path = "$mod_path/includes/templates";
 				$exec = "/bin/touch $template_path/$new_rename_file";
-                exec_fruitywifi($exec);
+                exec_blackbulb($exec);
 
 				$tempname=$new_rename_file;
 			}
@@ -254,7 +254,7 @@ if ($type == "templates") {
 			//RENAME TEMPLATE
 			$template_path = "$mod_path/includes/templates";
 			$exec = "/bin/mv $template_path/$new_rename $template_path/$new_rename_file";
-            exec_fruitywifi($exec);
+            exec_blackbulb($exec);
 
 			$tempname=$new_rename_file;
 		}
@@ -264,7 +264,7 @@ if ($type == "templates") {
 			//DELETE TEMPLATE
 			$template_path = "$mod_path/includes/templates";
 			$exec = "/bin/rm $template_path/$new_rename";
-            exec_fruitywifi($exec);
+            exec_blackbulb($exec);
 		}
 	}
 	header("Location: ../index.php?tab=4&tempname=$tempname");

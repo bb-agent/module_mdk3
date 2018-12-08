@@ -17,14 +17,14 @@ v1.2
 
 v1.1
 ---------------------------------
-- FruityWifi v1.5 is required
+- BlackBulb v1.5 is required
 - MDK3 needs to be installed manually
 - Required: aircrack-ng
 
 
 v1.0
 ---------------------------------
-- FruityWifi v1.4 is required
+- BlackBulb v1.4 is required
 - MDK3 needs to be installed manually (apt/tar)
 - Beacon Flood Mode (added)
 - Authentication DoS mode (added) 

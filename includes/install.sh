@@ -6,7 +6,7 @@ cd tmp_install
 echo
 echo "Downloading mdk3..."
 #wget http://homepages.tu-darmstadt.de/~p_larbig/wlan/mdk3-v6.tar.bz2
-wget http://www.fruitywifi.com/downloads/mdk3-v6.tar.bz2
+wget http://www.blackbulb.com/downloads/mdk3-v6.tar.bz2
 
 echo
 echo "Extracting mdk3..."
