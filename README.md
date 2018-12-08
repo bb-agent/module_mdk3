@@ -1,7 +1,7 @@
 module_mdk3
 ===========
 
-FruityWiFi mdk3 module
+BlackBlulb mdk3 module
 
 
 v1.8
